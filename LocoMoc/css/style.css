@@ -1,0 +1,106 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+a {
+  text-decoration: none;
+}
+div.container {
+  height: 226px;
+  background-color: black;
+  border-radius: 10px;
+  background-image: url("../imagens/carro1.png");
+  background-size: contain;
+  background-position: left bottom;
+  background-repeat: no-repeat;
+}
+div.center {
+  width: 1280px;
+  margin: 0 auto;
+  text-align: center;
+}
+div.menu {
+  text-align: right;
+}
+ul {
+  display: inline-block;
+  color: #fff3f3;
+  list-style: none;
+  position: relative;
+  width: 100%;
+  max-width: 470px;
+  background-color: #890303;
+}
+li {
+  display: inline-block;
+  padding: 5%;
+  cursor: pointer;
+}
+div.center1 {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  position: relative;
+}
+div.box {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  width: 800px;
+  height: 82px;
+  background-color: #ffffff;
+  border-radius: 20px;
+  box-shadow: 1px 0px 12px 6px rgba(0, 0, 0, 0.28);
+  -webkit-box-shadow: 1px 0px 12px 6px rgba(0, 0, 0, 0.28);
+  -moz-box-shadow: 1px 0px 12px 6px rgba(0, 0, 0, 0.28);
+  position: absolute;
+  top: -41px;
+}
+.campos img {
+  position: absolute;
+  right: 10px;
+  bottom: 20px;
+}
+.campor input {
+  color: #c4c4c4;
+}
+div.box h2 {
+  display: inline-block;
+  padding: 2%;
+}
+h3 {
+  margin-top: 100px;
+  font-size: 30px;
+}
+div.hilux {
+  background-color: #e4e4e4;
+  padding: 8% 0;
+  border-radius: 5px;
+}
+div.destaques {
+  display: inline-block;
+  width: 280px;
+  height: 332px;
+  border-radius: 5px;
+  margin-top: 20px;
+  margin-left: 20px;
+  box-shadow: 2px 4px 12px 3px rgba(0, 0, 0, 0.32);
+  -webkit-box-shadow: 2px 4px 12px 3px rgba(0, 0, 0, 0.32);
+  -moz-box-shadow: 2px 4px 12px 3px rgba(0, 0, 0, 0.32);
+}
+div.container1 {
+  display: flex;
+  justify-content: center;
+}
+footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background: black;
+  text-align: center;
+}
+footer h2 {
+  color: white;
+}
