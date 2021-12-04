@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="./vue.js"></script>
+    <title>Lista Anuncios</title>
+  </head>
+  <body>
+    <div id="app">
+      <section class="anuncios">
+        <div v-for="anuncio in anuncios" :key="anuncio.id" class="anuncio">
+          <img :src="anuncio.foto" :alt="anuncio.titulo" class="anuncio_img" width= 300px/>
+          <div class="anuncio_info">
+            <h2 class="anuncio_titulo">{{anuncio.titulo}} </h2>
+            <h3 class="anuncio_desc"> {{anuncio.descricao}} </h2>
+          </div>
+        </div>
+      </section>
+    </div>
+  </body>
+  <style>
+  body, h1, h2, ul, li{
+    padding: 0px;
+    margin: 0px
+  }
+  ul {
+    list-style: none;
+  }
+  * {
+    box-sizing: border-box;
+  }
+  .anuncios {
+    max-width: 300px;
+    margin: 100px auto 0 auto;
+  }
+  .anuncio_info{
+     padding:6px; 
+  }
+  .anuncio {
+    align-itens: center;
+    padding-bottom:40px;
+    margin-bottom:40px;
+    background: #ffffff; 
+    box-shadow: 0 0 2rem rgba(0,0,0,.1);
+    border-radius: 8px;
+  }
+  </style>
+  <script>
+    const vm = new Vue({
+      el: "#app",
+      data: {
+        anuncios: [],
+      },
+      methods: {
+        fetchAnuncios() {
+          fetch("https://apilocomoc.herokuapp.com/api/anuncio")
+            .then((r) => r.json())
+            .then((r) => {
+              this.anuncios = r;
+            });
+        },
+      },
+      created() {
+        this.fetchAnuncios();
+      },
+    });
+  </script>
+</html>
